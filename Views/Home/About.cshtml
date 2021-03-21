@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<div class="jumbotron">
+    <h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <p>Hello and welcome to the webstore</p>
+    <p>Here can you find alot of products and where to find them</p>
+</div>
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Have any questions?</h2>
+            <p><a href="mailto: abc@example.com">FakeEmaile@notreal.se</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Want to talk to a specifik store manager?</h2>
+            <p>@Html.ActionLink("List of managers", "Index", "Manager")</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Want to find specifik store?</h2>
+            <p>@Html.ActionLink("List of stores", "Index", "Store")</p>
+        </div>
+    </div>
+</div>

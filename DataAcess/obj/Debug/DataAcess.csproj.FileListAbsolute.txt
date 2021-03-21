@@ -1,0 +1,14 @@
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\obj\Debug\DataAcess.csprojAssemblyReference.cache
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\obj\Debug\DataAcess.csproj.CoreCompileInputs.cache
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\DataAcess.dll.config
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\DataAcess.dll
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\DataAcess.pdb
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\EntityFramework.dll
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\EntityFramework.xml
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\obj\Debug\DataAcess.csproj.CopyComplete
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\obj\Debug\DataAcess.dll
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\obj\Debug\DataAcess.pdb
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\StoreDatabase.mdf
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\StoreDatabase_log.ldf
