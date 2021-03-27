@@ -1,21 +1,28 @@
 ﻿using Autofac;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using Services.DatabaseAcess;
+using Services.DatabaseAcess.GetFromDatabase;
+using StoreWebbsite_Frame.aplication;
 using System.Linq;
 using System.Reflection;
-using System.Web;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace StoreWebbsite_Frame.AutofaqConfig
 {
-    public class AutoFaqContig
+    public static class AutoFaqContig
     {
-        public static Autofac.IContainer Configure()
+        public static IContainer Configure()
         {
             var builder = new ContainerBuilder();
 
-           // builder.RegisterType<Application>().As<IAplication>();
-           // builder.RegisterType<CordinatesModells>().As<ICordinatesModells>();
+            builder.RegisterType<Aplication>().As<IAplication>();
+
+            // GetListsFromDatabaseFunctions.
+            builder.RegisterType<GetProducts>().As<IGetProduct>();
+            builder.RegisterType<GetManagers>().As<IGetManagers>();
+            builder.RegisterType<GetStores>().As<IGetStores>();
+
+            // GoogleServises
+            // Not implemented yet
 
             builder.RegisterAssemblyTypes(Assembly.Load(nameof(DataAcess)))
                     .Where(t => t.Namespace.Contains("Utilities"))

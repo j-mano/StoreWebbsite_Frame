@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using DataAcess;
-using DataAcess.Modell;
 using DataAcess.Context;
-using System.Threading.Tasks;
+using Services.DatabaseAcess.GetFromDatabase;
 
 namespace StoreWebbsite_Frame.Controllers
 {
@@ -15,25 +10,16 @@ namespace StoreWebbsite_Frame.Controllers
         public static ProductContext Products = new ProductContext();
 
         // GET: Product
-        public ActionResult Index()
+        public ActionResult Index(IGetProduct ProductContext)
         {
-            List<ProductModell> loadedProducts = new List<ProductModell>();
-
-            Task AsynGetStoreTask = Task.Run(() =>
+            try
             {
-                try
-                {
-                    loadedProducts = (from Product in Products.Products select Product).ToList();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            });
-
-            AsynGetStoreTask.Wait();
-
-            return View(loadedProducts);
+                return View(ProductContext.GetProduct());
+            }
+            catch (Exception e)
+            {
+                return View();
+            }
         }
 
         // GET: Product/Details/5

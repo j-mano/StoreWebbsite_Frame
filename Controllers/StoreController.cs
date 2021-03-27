@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using DataAcess.Modell;
+using Services.DatabaseAcess;
+using Services.DatabaseAcess.GetFromDatabase;
 
 namespace StoreWebbsite_Frame.Controllers
 {
@@ -13,25 +15,16 @@ namespace StoreWebbsite_Frame.Controllers
         public static DataAcess.Context.StoreContext Stores = new DataAcess.Context.StoreContext();
 
         // GET: Store
-        public ActionResult Index()
+        public ActionResult Index(IGetStores storeContext)
         {
-            List<StoreModell> loadedStores= new List<StoreModell>();
-
-            Task AsynGetStoreTask = Task.Run(() =>
+            try
             {
-                try
-                {
-                   // loadedStores = (from Stores in Stores.StoreInfo select Stores).ToList();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            });
-
-            AsynGetStoreTask.Wait();
-
-            return View(loadedStores);
+                return View(storeContext.getStores());
+            }
+            catch(Exception e)
+            {
+                return View();
+            }
         }
 
         // GET: Store/Details/5

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Autofac;
+using StoreWebbsite_Frame.aplication;
+using StoreWebbsite_Frame.AutofaqConfig;
 using System.Web.Mvc;
 
 namespace StoreWebbsite_Frame.Controllers
@@ -10,6 +9,21 @@ namespace StoreWebbsite_Frame.Controllers
     {
         public ActionResult Index()
         {
+            try
+            {
+                var container = AutoFaqContig.Configure();
+
+                using (var scope = container.BeginLifetimeScope())
+                {
+                    var app = scope.Resolve<IAplication>();
+                    app.Run();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
             return View();
         }
 

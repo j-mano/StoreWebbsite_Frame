@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
 using DataAcess.Context;
-using DataAcess.Modell;
-using static System.Data.Entity.Database;
+using Services.DatabaseAcess.GetFromDatabase;
 
 namespace StoreWebbsite_Frame.Controllers
 {
@@ -15,25 +10,18 @@ namespace StoreWebbsite_Frame.Controllers
         public static ManagerContext ManagersControlls = new ManagerContext();
 
         // GET: Manager
-        public ActionResult Index()
+        public ActionResult Index(IGetManagers MangagerContext)
         {
-            List<ManagerInfoModell> Managers = new List<ManagerInfoModell>();
-
-            Task AsynGetStoreTask = Task.Run(() =>
+            try
             {
-                try
-                {
-                    Managers = (from manager in ManagersControlls.ManagerInfo select manager).ToList();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            });
+                return View(MangagerContext.getManagers());
+            }
+            catch(Exception e)
+            {
+                return View();
+            }
 
-            AsynGetStoreTask.Wait();
-
-            return View(Managers);
+            
         }
 
         // GET: Manager/Details/5

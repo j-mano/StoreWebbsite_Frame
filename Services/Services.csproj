@@ -76,6 +76,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseAcess\Database\DatabaseConection.cs" />
+    <Compile Include="DatabaseAcess\Database\IDataBaseConnection.cs" />
+    <Compile Include="DatabaseAcess\GetFromDatabase\GetManagers.cs" />
+    <Compile Include="DatabaseAcess\GetFromDatabase\GetProducts.cs" />
+    <Compile Include="DatabaseAcess\GetFromDatabase\GetStores.cs" />
+    <Compile Include="DatabaseAcess\GetFromDatabase\IGetManagers.cs" />
+    <Compile Include="DatabaseAcess\GetFromDatabase\IGetProduct.cs" />
+    <Compile Include="DatabaseAcess\GetFromDatabase\IGetStores.cs" />
+    <Compile Include="DatabaseAcess\WriteToDatabase\WriteProduct.cs" />
+    <Compile Include="DatabaseAcess\WriteToDatabase\WriteReview.cs" />
+    <Compile Include="Google_Services\GetAdressFromCordinated.cs" />
+    <Compile Include="Google_Services\GetGoogleUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,7 +95,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Google_Services\" />
+    <ProjectReference Include="..\DataAcess\DataAcess.csproj">
+      <Project>{7962BF89-4A96-4143-BF4C-19D7FE121F65}</Project>
+      <Name>DataAcess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

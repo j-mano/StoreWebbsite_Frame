@@ -27,3 +27,8 @@ C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\obj\Debug\Services.cs
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\obj\Debug\Services.csproj.CopyComplete
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\obj\Debug\Services.dll
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\obj\Debug\Services.pdb
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\bin\Debug\StoreDatabase.mdf
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\bin\Debug\StoreDatabase_log.ldf
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\bin\Debug\DataAcess.dll
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\bin\Debug\DataAcess.pdb
+C:\Users\Joachim\source\repos\StoreWebbsite_Frame\Services\bin\Debug\DataAcess.dll.config
