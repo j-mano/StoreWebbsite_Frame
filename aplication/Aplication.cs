@@ -8,7 +8,7 @@ namespace StoreWebbsite_Frame.aplication
 {
         public class Aplication : IAplication
         {
-            readonly IGetProduct _CordinatesModells;
+            IGetProduct _CordinatesModells;
 
             public Aplication(IGetProduct CordinatesModells)
             {
@@ -17,7 +17,7 @@ namespace StoreWebbsite_Frame.aplication
 
             public void Run()
             {
-
+                _CordinatesModells.GetProduct();
             }
         }
 }

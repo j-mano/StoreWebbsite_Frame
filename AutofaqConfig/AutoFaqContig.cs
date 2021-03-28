@@ -4,7 +4,6 @@ using Services.DatabaseAcess.GetFromDatabase;
 using StoreWebbsite_Frame.aplication;
 using System.Linq;
 using System.Reflection;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace StoreWebbsite_Frame.AutofaqConfig
 {
@@ -23,10 +22,6 @@ namespace StoreWebbsite_Frame.AutofaqConfig
 
             // GoogleServises
             // Not implemented yet
-
-            builder.RegisterAssemblyTypes(Assembly.Load(nameof(DataAcess)))
-                    .Where(t => t.Namespace.Contains("Utilities"))
-                    .As(t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
 
             return builder.Build();
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 using DataAcess.Context;
-using Services.DatabaseAcess.GetFromDatabase;
+using Services.DatabaseAcess;
 
 namespace StoreWebbsite_Frame.Controllers
 {
@@ -10,7 +10,7 @@ namespace StoreWebbsite_Frame.Controllers
         public static ManagerContext ManagersControlls = new ManagerContext();
 
         // GET: Manager
-        public ActionResult Index(IGetManagers MangagerContext)
+        public ActionResult Index(GetManagers MangagerContext)
         {
             try
             {
@@ -20,8 +20,6 @@ namespace StoreWebbsite_Frame.Controllers
             {
                 return View();
             }
-
-            
         }
 
         // GET: Manager/Details/5

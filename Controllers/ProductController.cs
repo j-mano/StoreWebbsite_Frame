@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using DataAcess.Context;
-using Services.DatabaseAcess.GetFromDatabase;
+using DataAcess.Modell;
+using Services.DatabaseAcess;
 
 namespace StoreWebbsite_Frame.Controllers
 {
@@ -10,11 +12,13 @@ namespace StoreWebbsite_Frame.Controllers
         public static ProductContext Products = new ProductContext();
 
         // GET: Product
-        public ActionResult Index(IGetProduct ProductContext)
+        public ActionResult Index(GetProducts ProductContext)
         {
             try
             {
-                return View(ProductContext.GetProduct());
+                List<ProductModell> loadedProducts = ProductContext.GetProduct();
+
+                return View(loadedProducts);
             }
             catch (Exception e)
             {

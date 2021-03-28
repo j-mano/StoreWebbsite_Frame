@@ -15,7 +15,7 @@ namespace StoreWebbsite_Frame.Controllers
         public static DataAcess.Context.StoreContext Stores = new DataAcess.Context.StoreContext();
 
         // GET: Store
-        public ActionResult Index(IGetStores storeContext)
+        public ActionResult Index(GetStores storeContext)
         {
             try
             {

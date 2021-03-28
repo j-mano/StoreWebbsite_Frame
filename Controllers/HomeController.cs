@@ -9,21 +9,6 @@ namespace StoreWebbsite_Frame.Controllers
     {
         public ActionResult Index()
         {
-            try
-            {
-                var container = AutoFaqContig.Configure();
-
-                using (var scope = container.BeginLifetimeScope())
-                {
-                    var app = scope.Resolve<IAplication>();
-                    app.Run();
-                }
-            }
-            catch
-            {
-                throw;
-            }
-
             return View();
         }
 

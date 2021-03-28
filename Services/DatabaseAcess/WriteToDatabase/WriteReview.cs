@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Services.DatabaseAcess.WriteToDatabase
 {
-    class WriteReview : DatabaseConection
+    class WriteReview : DatabaseConection, IWriteReview
     {
     }
 }

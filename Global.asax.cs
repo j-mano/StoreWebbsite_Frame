@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreWebbsite_Frame.AutofaqConfig;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,7 @@ namespace StoreWebbsite_Frame
     {
         protected void Application_Start()
         {
+            AutoFaqContig.Configure();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

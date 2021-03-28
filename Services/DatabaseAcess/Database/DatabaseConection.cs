@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Services.DatabaseAcess.Database
 {
+    /// <summary>
+    /// Connection to all contexts on the database.
+    /// </summary>
     public class DatabaseConection
     {
         public static ManagerContext ManagersContext  = new ManagerContext();
