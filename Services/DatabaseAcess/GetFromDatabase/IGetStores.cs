@@ -6,6 +6,6 @@ namespace Services.DatabaseAcess.GetFromDatabase
 {
     public interface IGetStores
     {
-        List<StoreModell> getStores();
+        List<StoreInfoModell> getStores();
     }
 }

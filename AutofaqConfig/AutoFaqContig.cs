@@ -19,6 +19,7 @@ namespace StoreWebbsite_Frame.AutofaqConfig
             builder.RegisterType<GetProducts>().As<IGetProduct>();
             builder.RegisterType<GetManagers>().As<IGetManagers>();
             builder.RegisterType<GetStores>().As<IGetStores>();
+            builder.RegisterType<GetReviewByProductID>().As<IGetReviewByProductID>();
 
             // GoogleServises
             // Not implemented yet

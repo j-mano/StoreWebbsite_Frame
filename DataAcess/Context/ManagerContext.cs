@@ -8,7 +8,6 @@ namespace DataAcess.Context
     {
         public ManagerContext() : base("DefaultConnection")
         {
-
         }
 
         public DbSet<ManagerInfoModell> ManagerInfo { get; set; }

@@ -109,5 +109,3 @@ C:\Users\Joachim\source\repos\StoreWebbsite_Frame\bin\Microsoft.Configuration.Co
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
-C:\Users\Joachim\source\repos\StoreWebbsite_Frame\bin\StoreDatabase.mdf
-C:\Users\Joachim\source\repos\StoreWebbsite_Frame\bin\StoreDatabase_log.ldf

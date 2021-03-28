@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using DataAcess.Context;
 using DataAcess.Modell;
 using Services.DatabaseAcess;
+using Services.DatabaseAcess.GetFromDatabase;
 
 namespace StoreWebbsite_Frame.Controllers
 {
@@ -27,9 +28,27 @@ namespace StoreWebbsite_Frame.Controllers
         }
 
         // GET: Product/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(Guid id, GetProducts ProductContext)
         {
-            return View();
+            List<ProductModell> loadedProducts          = ProductContext.GetProduct();
+            ProductModell loadedProducts2               = new ProductModell();
+
+            foreach (ProductModell Modell in loadedProducts)
+            {
+                if(Modell.productID == id)
+                {
+                    loadedProducts2 = Modell;
+                }
+            }
+
+            return View(loadedProducts2);
+        }
+
+        public ActionResult Reviews(Guid id)
+        {
+            GetReviewByProductID rt = new GetReviewByProductID();
+
+            return View(rt.GetReviewByProductI(id));
         }
     }
 }

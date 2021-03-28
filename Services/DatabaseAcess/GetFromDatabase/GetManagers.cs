@@ -12,6 +12,10 @@ namespace Services.DatabaseAcess
 {
     public class GetManagers : DatabaseConection, IGetManagers
     {
+        /// <summary>
+        /// Get all manager in the database.
+        /// </summary>
+        /// <returns></returns>
         public List<ManagerInfoModell> getManagers()
         {
             List<ManagerInfoModell> Managers = new List<ManagerInfoModell>();

@@ -12,9 +12,9 @@ namespace Services.DatabaseAcess
 {
     public class GetStores : DatabaseConection, IGetStores
     {
-        public List<StoreModell> getStores()
+        public List<StoreInfoModell> getStores()
         {
-            List<StoreModell> loadedStores = new List<StoreModell>();
+            List<StoreInfoModell> loadedStores = new List<StoreInfoModell>();
                 try
                 {
                     Task AsynGetStoreTask = Task.Run(() =>
@@ -26,7 +26,7 @@ namespace Services.DatabaseAcess
 
                     return loadedStores;
                 }
-                catch
+                catch (Exception e)
                 {
                     throw;
                 }

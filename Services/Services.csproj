@@ -79,9 +79,11 @@
     <Compile Include="DatabaseAcess\Database\DatabaseConection.cs" />
     <Compile Include="DatabaseAcess\GetFromDatabase\GetManagers.cs" />
     <Compile Include="DatabaseAcess\GetFromDatabase\GetProducts.cs" />
+    <Compile Include="DatabaseAcess\GetFromDatabase\GetReviewByProductID.cs" />
     <Compile Include="DatabaseAcess\GetFromDatabase\GetStores.cs" />
     <Compile Include="DatabaseAcess\GetFromDatabase\IGetManagers.cs" />
     <Compile Include="DatabaseAcess\GetFromDatabase\IGetProduct.cs" />
+    <Compile Include="DatabaseAcess\GetFromDatabase\IGetReviewByProductID.cs" />
     <Compile Include="DatabaseAcess\GetFromDatabase\IGetStores.cs" />
     <Compile Include="DatabaseAcess\WriteToDatabase\IWriteProduct.cs" />
     <Compile Include="DatabaseAcess\WriteToDatabase\IWriteReview.cs" />

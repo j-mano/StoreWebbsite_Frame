@@ -95,20 +95,13 @@
   <ItemGroup>
     <Compile Include="Context\ManagerContext.cs" />
     <Compile Include="Context\ProductContext.cs" />
+    <Compile Include="Context\ProductReviewModellContext.cs" />
     <Compile Include="Context\StoreContext.cs" />
     <Compile Include="Modell\ManagerInfoModell.cs" />
     <Compile Include="Modell\ProductModell.cs" />
-    <Compile Include="Modell\StoreModell.cs" />
+    <Compile Include="Modell\ProductReviewModell.cs" />
+    <Compile Include="Modell\StoreInfoModell.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="StoreDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="StoreDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>StoreDatabase.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

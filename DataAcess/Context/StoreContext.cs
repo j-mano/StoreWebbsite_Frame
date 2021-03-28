@@ -10,11 +10,11 @@ namespace DataAcess.Context
         {
         }
 
-        public DbSet<StoreModell> StoreInfo { get; set; }
+        public DbSet<StoreInfoModell> StoreInfo { get; set; }
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ManagerInfoModell>().ToTable("StoreInfo");
+            modelBuilder.Entity<StoreInfoModell>().ToTable("StoreInfo");
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             base.OnModelCreating(modelBuilder);
         }

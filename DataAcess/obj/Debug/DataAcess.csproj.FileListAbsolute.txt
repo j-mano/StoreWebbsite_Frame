@@ -10,8 +10,6 @@ C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\EntityFram
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\obj\Debug\DataAcess.csproj.CopyComplete
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\obj\Debug\DataAcess.dll
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\obj\Debug\DataAcess.pdb
-C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\StoreDatabase.mdf
-C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\StoreDatabase_log.ldf
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\Autofac.dll
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Joachim\source\repos\StoreWebbsite_Frame\DataAcess\bin\Debug\System.Buffers.dll
