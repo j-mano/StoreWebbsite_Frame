@@ -1,7 +1,6 @@
 ﻿using Autofac;
 using Services.DatabaseAcess;
 using Services.DatabaseAcess.GetFromDatabase;
-using StoreWebbsite_Frame.aplication;
 using System.Linq;
 using System.Reflection;
 
@@ -12,8 +11,6 @@ namespace StoreWebbsite_Frame.AutofaqConfig
         public static IContainer Configure()
         {
             var builder = new ContainerBuilder();
-
-            builder.RegisterType<Aplication>().As<IAplication>();
 
             // GetListsFromDatabaseFunctions.
             builder.RegisterType<GetProducts>().As<IGetProduct>();

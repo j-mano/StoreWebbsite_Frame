@@ -1,49 +1,23 @@
 ﻿@model IEnumerable<DataAcess.Modell.ProductModell>
 
-@{
-    ViewBag.Title = "Index";
-}
+<h2>Company Products</h2>
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.productName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productDescription)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.productType)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4" style="background-color: antiquewhite; border-radius:2.5em; border-style: groove; float: left;">
+            <p>@Html.DisplayNameFor(model => model.productName)</p>
             @Html.DisplayFor(modelItem => item.productName)
-        </td>
-        <td>
+            <p>@Html.DisplayNameFor(model => model.productDescription)</p>
             @Html.DisplayFor(modelItem => item.productDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
-        <td>
+            <p>@Html.DisplayNameFor(model => model.price)</p>
+            @Html.DisplayFor(modelItem => item.price) kr
+            <p>@Html.DisplayNameFor(model => model.productType)</p>
             @Html.DisplayFor(modelItem => item.productType)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.productID })
-        </td>
-    </tr>
-}
 
-</table>
+            <p></p> <!-- Emty space -->
+
+            @Html.ActionLink("Details", "Details", new { id = item.productID })
+        </div>
+    }
+</div>
