@@ -7,6 +7,11 @@ namespace Services.DatabaseAcess.WriteToDatabase
 {
     public class WriteProduct : DatabaseConection, IWriteProduct
     {
+        /// <summary>
+        /// This takes in productmodell / product giving it and guid id and add it to the database.
+        /// </summary>
+        /// <param name="ínputProduct"></param>
+        /// <returns></returns>
         public async Task createProductAsync(ProductModell ínputProduct)
         {
             try
@@ -34,6 +39,11 @@ namespace Services.DatabaseAcess.WriteToDatabase
             }
         }
 
+        /// <summary>
+        /// Validating if id of in ProductModell exist or not. Return an bool.
+        /// </summary>
+        /// <param name="ínputProduct"></param>
+        /// <returns></returns>
         private async Task<bool> validateIDToDatabaseAsync(ProductModell ínputProduct)
         {
             try

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Services.DatabaseAcess.WriteToDatabase
 {
-    interface IWriteProduct
+    public interface IWriteProduct
     {
         Task createProductAsync(ProductModell ínputProduct);
     }

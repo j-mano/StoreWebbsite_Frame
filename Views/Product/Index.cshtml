@@ -5,19 +5,19 @@
 <div class="container">
     @foreach (var item in Model)
     {
-        <div class="col-md-4" style="background-color: antiquewhite; border-radius:2.5em; border-style: groove; float: left;">
-            <p>@Html.DisplayNameFor(model => model.productName)</p>
-            @Html.DisplayFor(modelItem => item.productName)
-            <p>@Html.DisplayNameFor(model => model.productDescription)</p>
-            @Html.DisplayFor(modelItem => item.productDescription)
-            <p>@Html.DisplayNameFor(model => model.price)</p>
-            @Html.DisplayFor(modelItem => item.price) kr
-            <p>@Html.DisplayNameFor(model => model.productType)</p>
-            @Html.DisplayFor(modelItem => item.productType)
+    <div id="productInfoBlad" class="col-md-4">
+        <p>@Html.DisplayNameFor(model => model.productName)</p>
+        @Html.DisplayFor(modelItem => item.productName)
+        <p>@Html.DisplayNameFor(model => model.productDescription)</p>
+        @Html.DisplayFor(modelItem => item.productDescription)
+        <p>@Html.DisplayNameFor(model => model.price)</p>
+        @Html.DisplayFor(modelItem => item.price) kr
+        <p>@Html.DisplayNameFor(model => model.productType)</p>
+        @Html.DisplayFor(modelItem => item.productType)
 
-            <p></p> <!-- Emty space -->
+        <p></p> <!-- Emty space -->
 
-            @Html.ActionLink("Details", "Details", new { id = item.productID })
-        </div>
+        @Html.ActionLink("Show more product detail", "Details", new { id = item.productID })
+    </div>
     }
 </div>

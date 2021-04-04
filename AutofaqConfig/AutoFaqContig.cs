@@ -13,10 +13,12 @@ namespace StoreWebbsite_Frame.AutofaqConfig
             var builder = new ContainerBuilder();
 
             // GetListsFromDatabaseFunctions.
+            // Read
             builder.RegisterType<GetProducts>().As<IGetProduct>();
+            builder.RegisterType<GetReviewByProductID>().As<IGetReviewByProductID>();
             builder.RegisterType<GetManagers>().As<IGetManagers>();
             builder.RegisterType<GetStores>().As<IGetStores>();
-            builder.RegisterType<GetReviewByProductID>().As<IGetReviewByProductID>();
+            // Write
 
             // GoogleServises
             // Not implemented yet

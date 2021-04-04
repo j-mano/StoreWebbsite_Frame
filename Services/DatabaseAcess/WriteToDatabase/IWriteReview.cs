@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using DataAcess.Modell;
 using System.Threading.Tasks;
 
 namespace Services.DatabaseAcess.WriteToDatabase
 {
-    interface IWriteReview
+    public interface IWriteReview
     {
+        Task createReviewAsync(ProductReviewModell ínputProduct);
     }
 }

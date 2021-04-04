@@ -5,6 +5,7 @@ using DataAcess.Context;
 using DataAcess.Modell;
 using Services.DatabaseAcess;
 using Services.DatabaseAcess.GetFromDatabase;
+using Services.DatabaseAcess.WriteToDatabase;
 
 namespace StoreWebbsite_Frame.Controllers
 {
@@ -44,11 +45,10 @@ namespace StoreWebbsite_Frame.Controllers
             return View(loadedProducts2);
         }
 
-        public ActionResult Reviews(Guid id)
+        [HttpGet]
+        public ActionResult Reviews(Guid id, GetReviewByProductID rt)
         {
-            GetReviewByProductID rt = new GetReviewByProductID();
-
-            return View(rt.GetReviewByProductI(id));
+            return PartialView(rt.GetReviewByProductI(id));
         }
     }
 }
