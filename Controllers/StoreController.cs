@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using DataAcess.Modell;
 using Services.DatabaseAcess;
-using Services.DatabaseAcess.GetFromDatabase;
 
 namespace StoreWebbsite_Frame.Controllers
 {

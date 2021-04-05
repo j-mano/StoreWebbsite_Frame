@@ -48,8 +48,13 @@
 
     </dl>
 </div>
+
 <p>
     @Html.ActionLink("Back to List", "Index")
+</p>
+
+<p>
+    @Html.ActionLink("Add review", "WriteReviews", new { id = Model.productID }, null)
 </p>
 
 @{Html.RenderAction("Reviews", "Product");}

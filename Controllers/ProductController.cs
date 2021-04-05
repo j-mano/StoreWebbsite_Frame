@@ -48,7 +48,30 @@ namespace StoreWebbsite_Frame.Controllers
         [HttpGet]
         public ActionResult Reviews(Guid id, GetReviewByProductID rt)
         {
-            return PartialView(rt.GetReviewByProductI(id));
+            return PartialView( rt.GetReviewByProductI(id) );
+        }
+
+        public ActionResult WriteReviews( Guid id, ProductReviewModell GetReviewDetails )
+        {
+            GetReviewDetails.ProductIDKey = id;
+
+            return View(GetReviewDetails);
+        }
+
+        // POST: Default/Create
+        [HttpPost]
+        public async System.Threading.Tasks.Task<ActionResult> WriteReviews( ProductReviewModell Review , WriteReview DataBaseWriteReview)
+        {
+            try
+            {
+                bool succesfullywriten = await DataBaseWriteReview.createReviewAsync(Review);
+
+                return RedirectToAction( "Details" , new { id = Review.ProductIDKey, UrlParameter.Optional } );
+            }
+            catch(Exception e)
+            {
+                return View();
+            }
         }
     }
 }

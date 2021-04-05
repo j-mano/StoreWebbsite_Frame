@@ -20,7 +20,7 @@ namespace Services.DatabaseAcess.WriteToDatabase
                 {
                     ínputProduct.productID = Guid.NewGuid();
 
-                    while(await validateIDToDatabaseAsync(ínputProduct) == false)
+                    while(await validateIDToDatabaseAsync(ínputProduct) == true)
                     {
                         ínputProduct.productID = Guid.NewGuid();
                     }

@@ -13,7 +13,7 @@ namespace Services.DatabaseAcess.WriteToDatabase
         /// </summary>
         /// <param name="ínputProduct"></param>
         /// <returns></returns>
-        public async Task createReviewAsync(ProductReviewModell ínputProduct)
+        public async Task<bool> createReviewAsync(ProductReviewModell ínputProduct)
         {
             try
             {
@@ -21,13 +21,15 @@ namespace Services.DatabaseAcess.WriteToDatabase
                 {
                     ínputProduct.ReviewIDKey = Guid.NewGuid();
 
-                    while (await validateIDToDatabaseAsync(ínputProduct) == false)
+                    while (await validateIDToDatabaseAsync(ínputProduct) == true)
                     {
                         ínputProduct.ReviewIDKey = Guid.NewGuid();
                     }
 
                     ProductReviewModellContext.Productreviews.Add(ínputProduct);
-                    await ProductsContext.SaveChangesAsync();
+                    await ProductReviewModellContext.SaveChangesAsync();
+
+                    return true;
                 }
                 else
                 {

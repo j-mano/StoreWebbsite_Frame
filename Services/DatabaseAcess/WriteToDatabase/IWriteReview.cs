@@ -5,6 +5,6 @@ namespace Services.DatabaseAcess.WriteToDatabase
 {
     public interface IWriteReview
     {
-        Task createReviewAsync(ProductReviewModell ínputProduct);
+        Task<bool> createReviewAsync(ProductReviewModell ínputProduct);
     }
 }
