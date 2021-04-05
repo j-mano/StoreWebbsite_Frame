@@ -1,19 +1,14 @@
 ﻿@model DataAcess.Modell.ProductModell
 
-<h2>Details</h2>
+<h2>Details of product</h2>
+<p>
+    @Html.ActionLink("Back to product list", "Index")
+</p>
 
 <div>
     <h4>ProductModell</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.productID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.productID)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.productName)
         </dt>
@@ -50,11 +45,9 @@
 </div>
 
 <p>
-    @Html.ActionLink("Back to List", "Index")
-</p>
-
-<p>
     @Html.ActionLink("Add review", "WriteReviews", new { id = Model.productID }, null)
 </p>
 
-@{Html.RenderAction("Reviews", "Product");}
+<div class="container">
+    @{Html.RenderAction("Reviews", "Product");}
+</div>

@@ -45,6 +45,11 @@ namespace StoreWebbsite_Frame.Controllers
             return View(loadedProducts2);
         }
 
+        /// <summary>
+        /// Meant to be partial view in details of the products
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Reviews(Guid id, GetReviewByProductID rt)
         {
@@ -58,6 +63,12 @@ namespace StoreWebbsite_Frame.Controllers
             return View(GetReviewDetails);
         }
 
+        /// <summary>
+        /// This is meant to be its own site.
+        /// </summary>
+        /// <param name="Review"></param>
+        /// <param name="DataBaseWriteReview"></param>
+        /// <returns></returns>
         // POST: Default/Create
         [HttpPost]
         public async System.Threading.Tasks.Task<ActionResult> WriteReviews( ProductReviewModell Review , WriteReview DataBaseWriteReview)
